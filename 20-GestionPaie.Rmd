@@ -1,0 +1,46 @@
+# GESTION DE LA PAIE
+
+## LES DONNEES
+
+
+- Les activités, les entitées
+
+- Les effectifs
+Les effectifs sont issus de la base Icare. 
+Il s'agit des effectifs présents à la production, pour tous les types de contrats, y compris encadrement (ETPP phase 3 + part d'encadrement phase 5)
+
+- L'output : 
+Pour les Centres Nationaux de Traitement de la Paie du Recouvrement CNPR : le nombre de bulletins de salaire moyen mensuel
+
+Pour les autres organismes : le nombre de personnes physiques
+Nombre d'agents présents à le fin du trimestre (source Icare/ Analyse patrimoniale). Moyenne des 4 trimestres.
+
+
+- La mutualisation : correction (vision prestataire) 
+
+
+## VISION PRESTATAIRE : PRISE EN COMPTE DE LA MUTUALISATION
+
+La gestion de la mutualisation est réalisée en 3 étapes :
+
+- la définition du périmètre de mutualisation : qui sont les prestataires ?  qui sont les clients ? Un nouveau calcul d'ETPP et d'Output par consolidation des données sur le nouveau périmètre (Clients + Prestataires) 
+
+
+- le calcul de la référence de productivité sur le nouveau périmètre
+
+- la correction de l'Output, avec utilisation de la référence de productivité
+
+### DEFINITION DU PERIMETRE DE MUTUALISATION
+
+Quels prestataires ? quels clients ?
+
+### CALCUL DE LA REFERENCE DE PRODUCTIVITE
+
+La référence de productivité est définie par le niveau national est s'élève à **300 bulletins de salaire par agent**
+
+Le SPC est donc calculé pour l'ensemble des organismes sur la base de cette référence.
+
+*Pour les organismes clients des CNPR, sur l'activité résiduelle de traitement de la paie, la référence n'est pas utilisée. Le SPC est valorisé à 100%, les ETPP de référence sont égaux aux ETPP.*
+
+
+## DONNÉES CORRIGÉES

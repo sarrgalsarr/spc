@@ -1,0 +1,54 @@
+# PILOTAGE ET AIDE AU PILOTAGE
+
+## LES DONNEES
+
+
+
+• Les activités, les entités
+Toutes les activités pilotage et aide au pilotage sont présentes dans le périmètre de calcul de l’indicateur.
+Une seule exception l’activité “Mutualisation Pilotage” (OM10) réservée aux ADD en charge du pilotage des
+caisses déléguées TI.
+
+• L’output : le nombre de personnes physiques de l’organisme pour l’ensemble des activités (y compris
+centres de validation, activités nationales, vie sociale, formation) Nombre d’agents présents à le fin du
+trimestre (source Icare/ Analyse patrimoniale). Moyenne des 4 trimestres.
+
+• L’input de nombre d’ETP présents à la production (avec encadrement) sur les activités citées.
+
+• La mutualisation : **pas de correction**
+
+
+
+
+## CALCUL DU SPC
+
+Le calcul du score se base sur la relation entre les effectifs consacrés aux ativités de pilotage et les personnes physiques présentes dans les organismes.
+
+### LE CHOIX DE LA REFERENCE
+
+La méthode utilisée diffère du calcul habituel de la moyenne.
+Le principe est de construire une droite de regression qui exprime le mieux la relation entre le nombre de personnes physiques et les ETPP consacrés aux activités pilotage et aide au pilotage.
+
+
+**ETPP de référence = " .. " x Output **
+
+Output : nbre de personnes physiques
+
+
+
+Ainsi déterminés par le modèle de régression, les ETPP de référence permettent le calcul d'une productivité de référence, par construction identique pour chaque organisme.
+
+Référence = Output / ETPP_ref
+
+
+
+
+## RESULTATS
+
+Le SPC se calcule ensuite selon la méthode habituelle.
+
+
+### ANNEXE STATISTIQUE
+
+
+

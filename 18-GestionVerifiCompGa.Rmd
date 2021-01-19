@@ -1,0 +1,58 @@
+# GESTION ET VERIFICATION COMPTABLE GA
+
+## LES DONNEES
+
+
+- Les activités, les entitées
+
+
+- Les effectifs
+Les effectifs sont issus de la base Icare. 
+Il s'agit des effectifs présents à la production, pour tous les types de contrats, y compris encadrement (ETPP phase 3 + part d'encadrement phase 5)
+
+- L'output : le nombre de personnes physiques
+Nombre d'agents présents à le fin du trimestre (source Icare/ Analyse patrimoniale). Moyenne des 4 trimestres.
+
+- La mutualisation : correction (vision prestataire) 
+
+
+## VISION PRESTATAIRE : PRISE EN COMPTE DE LA MUTUALISATION
+
+La gestion de la mutualisation est réalisée en 3 étapes :
+
+- la définition du périmètre de mutualisation : qui sont les prestataires ?  qui sont les clients ? Un nouveau calcul d'ETPP et d'Output par consolidation des données sur le nouveau périmètre (Clients + Prestataires) 
+
+
+- le calcul de la référence de productivité sur le nouveau périmètre
+
+- la correction de l'Output, avec utilisation de la référence de productivité
+
+### DEFINITION DU PERIMETRE DE MUTUALISATION
+
+Quels prestataires ? quels clients ?
+
+Le tableau s’arrête au champ Urssaf. L’Acoss et la DSI sont clientes de la région Centre Val de Loire (impact sur l'activité comptable de la gestion du CNPR).
+
+Dans les calculs, le périmètre de mutualisation de la région Centre est exclue. En effet la donnée “nombre de
+personnes physiques” de l’Acoss n’est pas encore présente dans le champ de l’outil de consolidation Icare.
+
+### CALCUL DE LA REFERENCE DE PRODUCTIVITE
+
+La référence se calcule comme la moyenne des productivités individuelles hors valeurs extrêmes.
+
+Remarque : dans une moyenne de productivités individuelles, chaque organisme a le même poids dans le calcul. Cette moyenne est de fait plus sensible aux valeurs extrêmes, qu'il est donc nécessaire de détecter et d'éliminer. 
+
+La détection s'effectue à l'aide de la méthode du Z-Score robuste.
+Il se calcule à l'aide de deux paramètres : la médiane et le MAD (Median Absolute Deviation, écart absolu médian).
+
+Z-Score(Productivité) = (Productivité - Médiane)/MAD
+
+*Un Z-Score supérieur à 3 en valeur absolue indique une valeur extrême*
+
+### CORRECTION DE L'OUPUT
+
+L'exploitation de la référence de productivité permet de corriger l'output par un transfert positif vers le prestataire et négatif vers le client.
+Dans ses effectifs, le prestataire conserve les effectifs mutualisés qui travaillent pour le client. 
+
+
+## DONNÉES CORRIGÉES

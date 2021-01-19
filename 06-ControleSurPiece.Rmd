@@ -1,0 +1,74 @@
+# CONTROLE SUR PIECES
+
+## LES DONNEES
+
+- Les activités
+Les activités retenues "PCAP" : 
+
+
+- Liste des actions : 
+
+- Les entités
+Une seule entité concernée : **URSSAF**
+
+
+- Les effectifs
+Les effectifs sont issus de la base Icare. 
+Il s'agit des effectifs présents à la production, pour tous les types de contrats, y compris encadrement (ETPP phase 3 + part d'encadrement phase 5)
+
+- La production et la durée du contrôle : nombre d'actions de contrôle et durée du contrôle par code action (source Disep-SAS)
+
+
+## LE CALCUL DU SPC : TI vs RG-ACT
+
+Les travaux sur les actions de lutte contre le travail illégal ont montré l'intérêt de distinguer les actions de contrôle partiel sur pièces TI (Actions203) des autres de contrôle partiel d'assiette (123, 124) 
+
+*Le calcul du SPC s'effectue donc sur ses deux segments :
+
+- Actions 203
+- Autres actions (123, 124)*
+
+
+Le volume de production par type d'actions est connu et extrait de la base SAS-Disep.
+
+Par type d'actions (203, 123-124), les effectifs ETPP sont estimés à partir des ETPP issus d'Ogur auxquels s'appliquent une clé de répartition.
+
+Cette clé est égale au rapport entre Temps passé par type d'actions et le temps passé sur l'ensemble des actions LCTI. Ces données sont extraites de la base SAS-Disep.
+
+Pour chaque organisme, 
+
+- Production(Type d'actions) = Nb d'Actions Aboutis(Type d'actions)
+
+- ETPP(Type d'actions) = ETPP LCTI x Temps passé(Type d'actions) / Temps passé(Actions LCTI)
+
+- Productivité(Taille/Type d'actions) = Production(Taille/Type d'actions) / ETPP(Taille/Type d'actions)
+
+
+
+Le calcul du SPC obéit à la loi générale, il est déterminé pour chaque regroupement Taille/Type d'actions. Des productivités individuelles est déduite une moyenne, cette moyenne constitue la référence.
+
+Pour un organisme par Type d'actions, le score des productivités comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+**SPC = Effectif de référence / Effectif** 
+
+ou 
+
+**Productivité / Référence de produtivité**
+
+
+Le  SPC mesure l'écart à la référence de productivité. Un score proche de la valeur  1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence. 
+
+Il se décline également en « enjeu en ETP »  : 
+**Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)**
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité. 
+
+
+### ACTIONS PCAP 203 - ETPP
+
+
+### ACTIONS PCAP 203 - REFERENCE
+
+### ACTIONS PCAP 203 - SPC

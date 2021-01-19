@@ -1,0 +1,1453 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Score des Productivités Comparées},
+  pdfauthor={ACOSS},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{Score des Productivités Comparées}
+\author{ACOSS}
+\date{2021-01-19}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{part-activituxe9s-services-productivituxe9s-basuxe9es-sur-le-nombre-de-comptes-actifs}{%
+\part{Activités services productivités basées sur le nombre de comptes actifs}\label{part-activituxe9s-services-productivituxe9s-basuxe9es-sur-le-nombre-de-comptes-actifs}}
+
+\hypertarget{fend}{%
+\chapter{FEND}\label{fend}}
+
+\hypertarget{les-donnees}{%
+\section{LES DONNEES}\label{les-donnees}}
+
+\begin{itemize}
+\item
+  Les activités
+  Les activités retenues ``gestion des Fend et de l'image'' : OG841 et OM841
+\item
+  Les entités
+  Une seule entité concernée : \textbf{URSSAF}
+\end{itemize}
+
+Pour les entités CESU, PAJE, FRONTALIERS SUISSES, TESE, CEA, la gestion des Fend est traitée dans les lignes.
+
+\begin{itemize}
+\item
+  Les effectifs
+  Les effectifs sont issus de la base Icare.
+  Il s'agit des effectifs présents à la production, pour tous les types de contrats, y compris encadrement (ETPP phase 3 + part d'encadrement phase 5)
+\item
+  La production
+  Nombre de plis entrants pour l'année(source Cassiopée, code PLI01).
+\item
+  La mutualisation : pas de correction
+\end{itemize}
+
+\hypertarget{le-choix-de-la-reference}{%
+\section{LE CHOIX DE LA REFERENCE}\label{le-choix-de-la-reference}}
+
+Pour cette activité la référence est déterminée par la caisse nationale
+\textbf{Référence = 40 000 plis par agent}
+
+\hypertarget{le-calcul-du-spc}{%
+\section{LE CALCUL DU SPC}\label{le-calcul-du-spc}}
+
+Pour une activité du référentiel, le score des productivités comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le score d'efficience technique s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+\textbf{SPC = Effectif de référence / Effectif}
+
+ou
+
+\textbf{Productivité / Référence de produtivité}
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur 1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence.
+
+Il se décline également en « enjeu en ETP » :
+\textbf{Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- Score Efficience Technique)}
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"bookdown"}\NormalTok{)}
+\CommentTok{# or the development version}
+\CommentTok{# devtools::install_github("rstudio/bookdown")}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{tresorerie---flux-financiers---gestion-r}{%
+\chapter{TRESORERIE - FLUX FINANCIERS - GESTION R}\label{tresorerie---flux-financiers---gestion-r}}
+
+\hypertarget{les-donnuxe9es}{%
+\section{LES DONNÉES}\label{les-donnuxe9es}}
+
+Le périmètre contient :
+
+\begin{itemize}
+\item
+  3 activités sont consolidées pour le calcul des ETPP : \textbf{gestion et prévision de la trésorerie(OG5, OM5), gestion des titres financiers et des impayés (OG5a, OM5a) et gestion R et S (OG62, OM62)}
+\item
+  1 inducteur de production: \textbf{le nombre de mouvements issus de Soft (bruts et impayés) y compris impayés de téléréglements et de prélèvements} (source Ogur/Soft). Cet indicateur est celui utilisé dans Ogur pour les activités gestion de la trésorerie et gestion des titres financiers. Concernant la gestion R et S, l'inducteur est le nombre d'écritures de crédits.
+\end{itemize}
+
+\hypertarget{les-donnuxe9es-brutes}{%
+\section{LES DONNÉES BRUTES}\label{les-donnuxe9es-brutes}}
+
+\hypertarget{vision-prestataire-prise-en-compte-de-la-mutualisation}{%
+\section{VISION PRESTATAIRE : PRISE EN COMPTE DE LA MUTUALISATION}\label{vision-prestataire-prise-en-compte-de-la-mutualisation}}
+
+La gestion de la mutualisation est réalisée en 3 étapes :
+
+\begin{itemize}
+\item
+  la définition du périmètre de mutualisation : qui sont les prestataires ? qui sont les clients ? Un nouveau calcul d'ETPP et d'Output par consolidation des données sur le nouveau périmètre (Clients + Prestataires)
+\item
+  le calcul de la référence de productivité sur le nouveau périmètre
+\item
+  la correction de l'Output, avec utilisation de la référence de productivité
+\end{itemize}
+
+\hypertarget{definition-du-perimetre-de-mutualisation}{%
+\subsection{DEFINITION DU PERIMETRE DE MUTUALISATION}\label{definition-du-perimetre-de-mutualisation}}
+
+Quels prestataires ? quels clients ?
+
+Un recalcul des effectifs et des outputs, les clients sont rapprochés des prestataires.
+
+\hypertarget{calcul-de-la-reference-de-productivite}{%
+\subsection{CALCUL DE LA REFERENCE DE PRODUCTIVITE}\label{calcul-de-la-reference-de-productivite}}
+
+L'utilisation du Z-score robuste ne fait ressortir aucune valeur extrême. Toutes les valeurs sont inférieures à 3.
+La référence de productivité est donc égale à la moyenne des productivités individuelles calculées sur le périmètre de mutualisation.
+
+\hypertarget{correction-de-louput}{%
+\subsection{CORRECTION DE L'OUPUT}\label{correction-de-louput}}
+
+L'exploitation de la référence de productivité permet de corriger l'output par un transfert positif vers le prestataire et négatif vers le client.
+
+\hypertarget{donnuxe9es-corriguxe9es}{%
+\section{DONNÉES CORRIGÉES}\label{donnuxe9es-corriguxe9es}}
+
+\hypertarget{accueil-telephonique}{%
+\chapter{ACCUEIL TELEPHONIQUE}\label{accueil-telephonique}}
+
+\hypertarget{les-donnuxe9es-1}{%
+\section{LES DONNÉES}\label{les-donnuxe9es-1}}
+
+Les effectifs sont issus de la base Icare. Pour chaque organisme, sont recueillis tous les effectifs qui pointent sur les activités \textbf{``accueil téléphonique (Niveau 1) et ASDM''}, qu'elles soient mutualisées ou non. Il s'agit dans la langue ogurienne des activités OG10221, OM10221, OMb10221 et OM10221a.
+
+\textbf{Les entités concernées : URSSAF, CESU, PAJE, FRONTALIERS SUISSES, TESE, CEA }
+
+Le volume d'\textbf{appels téléphoniques aboutis} est extrait de la base Sidéral, il s'agit des appels traités par chaque organisme (``par qui''), peu importe le destinataire de l'appel (``pour qui'').
+Sont pris en compte, les appels traités par l'organisme, Urssaf et autres entités.
+
+Le calcul du SPC s'inscrit donc bien dans la vision prestataire.
+
+\hypertarget{le-calcul-du-spc-un-spc-par-offre}{%
+\section{LE CALCUL DU SPC, UN SPC PAR OFFRE}\label{le-calcul-du-spc-un-spc-par-offre}}
+
+\textbf{La productivité de chaque organisme est calculée par offre de service.}
+
+Par offre de service, le volume de production - le nombre d'appels aboutis - est connu et extrait de Sidéral.
+
+Par offre de service, les effectifs ETPP sont estimés à partir des ETPP issus d'Ogur auxquels s'appliquent une clé de répartition.
+
+Cette clé est égale au rapport entre Temps passé sur l'offre et le temps passé sur l'ensemble des offres. Ces données sont extraites de Sidéral.
+
+Pour chaque organisme,
+
+\begin{itemize}
+\item
+  Production(Offre) = Nb Appels Aboutis(Offre)
+\item
+  ETPP(Offre) = ETPP Accueil Téléphonique x Temps passé(Offre) / Temps passé(Toutes les Offres)
+\item
+  Productivité(Offre) = Production(Offre) / ETPP(Offre)
+\end{itemize}
+
+Le calcul du SPC obéit à la loi générale, il est déterminé pour chaque offre. Des productivités individuelles est déduit une moyenne, cette moyenne constitue la référence.
+
+Pour un organisme et une offre, le score des productivités comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+\textbf{SPC = Effectif de référence / Effectif}
+
+ou
+
+\textbf{Productivité / Référence de produtivité}
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur 1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence.
+
+Il se décline également en « enjeu en ETP » :
+\textbf{Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)}
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité.
+
+\hypertarget{accur---etpp}{%
+\subsection{ACCUR - ETPP}\label{accur---etpp}}
+
+\hypertarget{accur---reference}{%
+\subsection{ACCUR - REFERENCE}\label{accur---reference}}
+
+\hypertarget{accur---spc}{%
+\subsection{ACCUR - SPC}\label{accur---spc}}
+
+\hypertarget{controle-sur-place}{%
+\chapter{CONTROLE SUR PLACE}\label{controle-sur-place}}
+
+\hypertarget{les-donnees-1}{%
+\section{LES DONNEES}\label{les-donnees-1}}
+
+\begin{itemize}
+\item
+  Les activités
+  Les activités retenues ``Contrôle'' :
+\item
+  Liste des actions : ``110'', ``112'', ``113'', ``114'', ``116'', ``122'', ``401'', ``120'', ``121'', ``140'', ``142'', ``150'', ``200'', ``201'', ``204'', ``210'', ``230'', ``240'', ``250'', ``143'', ``144'',``145'', ``146''
+\item
+  Les entités
+  Une seule entité concernée : \textbf{URSSAF}
+\item
+  Les effectifs
+  Les effectifs sont issus de la base Icare.
+  Il s'agit des effectifs présents à la production, pour tous les types de contrats, y compris encadrement (ETPP phase 3 + part d'encadrement phase 5)
+\item
+  La production et la durée du contrôle : nombre d'actions de contrôle et durée du contrôle par code action, taille du cotisant contrôlé (source Disep-SAS)
+\end{itemize}
+
+Taille :
+
+\hypertarget{le-calcul-du-spc-par-taille-du-cotisant-controle-et-type-dactions}{%
+\section{LE CALCUL DU SPC : PAR TAILLE DU COTISANT CONTROLE ET TYPE D'ACTIONS}\label{le-calcul-du-spc-par-taille-du-cotisant-controle-et-type-dactions}}
+
+La durée de contrôle varie fortement en fonction de la taille du cotisant contrôlé et du type d'action, ainsi, le calcul de la productivité se réalise sur un regroupement taille/type.
+
+Par regroupement Taille/Type d'actions, le volume de production - le nombre d'actions de contrôle - est connu et extrait de la base SAS-Disep.
+
+Par regroupement Taille/Type d'actions, les effectifs ETPP sont estimés à partir des ETPP issus d'Ogur auxquels s'appliquent une clé de répartition.
+
+Cette clé est égale au rapport entre Temps passé sur le regroupement Taille/Type d'actions et le temps passé sur l'ensemble des actions CCA. Ces données sont extraites de la base SAS-Disep.
+
+Pour chaque organisme,
+
+\begin{itemize}
+\item
+  Production(Taille/Type d'actions) = Nb d'Actions Aboutis(Taille/Type d'actions)
+\item
+  ETPP(Taille/Type d'actions) = ETPP CCA x Temps passé(Taille/Type d'actions) / Temps passé(Actions CCA)
+\item
+  Productivité(Taille/Type d'actions) = Production(Taille/Type d'actions) / ETPP(Taille/Type d'actions)
+\end{itemize}
+
+Le calcul du SPC obéit à la loi générale, il est déterminé pour chaque regroupement Taille/Type d'actions. Des productivités individuelles est déduite une moyenne, cette moyenne constitue la référence.
+
+Pour un organisme et un regroupement Taille/Type d'actions, le score des productivités comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+\textbf{SPC = Effectif de référence / Effectif}
+
+ou
+
+\textbf{Productivité / Référence de produtivité}
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur 1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence.
+
+Il se décline également en « enjeu en ETP » :
+\textbf{Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)}
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité.
+
+\hypertarget{actions-110-112-moins-de-3---etpp}{%
+\subsection{Actions 110-112-Moins de 3 - ETPP}\label{actions-110-112-moins-de-3---etpp}}
+
+\hypertarget{actions-110-112-moins-de-3---reference}{%
+\subsection{Actions 110-112-Moins de 3 - REFERENCE}\label{actions-110-112-moins-de-3---reference}}
+
+\hypertarget{actions110-112-moins-de-3---spc}{%
+\subsection{Actions110-112-Moins de 3 - SPC}\label{actions110-112-moins-de-3---spc}}
+
+\hypertarget{lcti}{%
+\chapter{LCTI}\label{lcti}}
+
+\hypertarget{les-donnees-2}{%
+\section{LES DONNEES}\label{les-donnees-2}}
+
+\begin{itemize}
+\item
+  Les activités
+  Les activités retenues ``LCTI'' :
+\item
+  Liste des actions :
+\item
+  Les entités
+  Une seule entité concernée : \textbf{URSSAF}
+\item
+  Les effectifs
+  Les effectifs sont issus de la base Icare.
+  Il s'agit des effectifs présents à la production, pour tous les types de contrats, y compris encadrement (ETPP phase 3 + part d'encadrement phase 5)
+\item
+  La production et la durée du contrôle : nombre d'actions de contrôle et durée du contrôle par code action (source Disep-SAS)
+\end{itemize}
+
+\hypertarget{le-calcul-du-spc-prevention-recherche-vs-travail-dissimule}{%
+\section{LE CALCUL DU SPC : PREVENTION \& RECHERCHE vs TRAVAIL DISSIMULE}\label{le-calcul-du-spc-prevention-recherche-vs-travail-dissimule}}
+
+Les travaux sur les actions de lutte contre le travail illégal ont montré l'intérêt de distinguer les actions de prévention et recherche (Actions 132) des autres actions de travail dissimulé (Actions 130, 131) ou d'exploitation des procès verbaux LCTD (Actions 133).
+
+\emph{Le calcul du SPC s'effectue donc sur ses deux segments :
+- Actions 132
+- Autres actions (130, 131, 133)}
+
+Le volume de production par type d'actions est connu et extrait de la base SAS-Disep.
+
+Par type d'actions (132, hors132), les effectifs ETPP sont estimés à partir des ETPP issus d'Ogur auxquels s'appliquent une clé de répartition.
+
+Cette clé est égale au rapport entre Temps passé par type d'actions et le temps passé sur l'ensemble des actions LCTI. Ces données sont extraites de la base SAS-Disep.
+
+Pour chaque organisme,
+
+\begin{itemize}
+\item
+  Production(Type d'actions) = Nb d'Actions Aboutis(Type d'actions)
+\item
+  ETPP(Type d'actions) = ETPP LCTI x Temps passé(Type d'actions) / Temps passé(Actions LCTI)
+\item
+  Productivité(Taille/Type d'actions) = Production(Taille/Type d'actions) / ETPP(Taille/Type d'actions)
+\end{itemize}
+
+Le calcul du SPC obéit à la loi générale, il est déterminé pour chaque regroupement Taille/Type d'actions. Des productivités individuelles est déduite une moyenne, cette moyenne constitue la référence.
+
+Pour un organisme par Type d'actions, le score des productivités comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+\textbf{SPC = Effectif de référence / Effectif}
+
+ou
+
+\textbf{Productivité / Référence de produtivité}
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur 1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence.
+
+Il se décline également en « enjeu en ETP » :
+\textbf{Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)}
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité.
+
+\hypertarget{actions-lcti-132---etpp}{%
+\subsection{ACTIONS LCTI 132 - ETPP}\label{actions-lcti-132---etpp}}
+
+\hypertarget{actions-lcti-132---reference}{%
+\subsection{ACTIONS LCTI 132 - REFERENCE}\label{actions-lcti-132---reference}}
+
+\hypertarget{actions-lcti-132---spc}{%
+\subsection{ACTIONS LCTI 132 - SPC}\label{actions-lcti-132---spc}}
+
+\hypertarget{controle-sur-pieces}{%
+\chapter{CONTROLE SUR PIECES}\label{controle-sur-pieces}}
+
+\hypertarget{les-donnees-3}{%
+\section{LES DONNEES}\label{les-donnees-3}}
+
+\begin{itemize}
+\item
+  Les activités
+  Les activités retenues ``PCAP'' :
+\item
+  Liste des actions :
+\item
+  Les entités
+  Une seule entité concernée : \textbf{URSSAF}
+\item
+  Les effectifs
+  Les effectifs sont issus de la base Icare.
+  Il s'agit des effectifs présents à la production, pour tous les types de contrats, y compris encadrement (ETPP phase 3 + part d'encadrement phase 5)
+\item
+  La production et la durée du contrôle : nombre d'actions de contrôle et durée du contrôle par code action (source Disep-SAS)
+\end{itemize}
+
+\hypertarget{le-calcul-du-spc-ti-vs-rg-act}{%
+\section{LE CALCUL DU SPC : TI vs RG-ACT}\label{le-calcul-du-spc-ti-vs-rg-act}}
+
+Les travaux sur les actions de lutte contre le travail illégal ont montré l'intérêt de distinguer les actions de contrôle partiel sur pièces TI (Actions203) des autres de contrôle partiel d'assiette (123, 124)
+
+*Le calcul du SPC s'effectue donc sur ses deux segments :
+
+\begin{itemize}
+\tightlist
+\item
+  Actions 203
+\item
+  Autres actions (123, 124)*
+\end{itemize}
+
+Le volume de production par type d'actions est connu et extrait de la base SAS-Disep.
+
+Par type d'actions (203, 123-124), les effectifs ETPP sont estimés à partir des ETPP issus d'Ogur auxquels s'appliquent une clé de répartition.
+
+Cette clé est égale au rapport entre Temps passé par type d'actions et le temps passé sur l'ensemble des actions LCTI. Ces données sont extraites de la base SAS-Disep.
+
+Pour chaque organisme,
+
+\begin{itemize}
+\item
+  Production(Type d'actions) = Nb d'Actions Aboutis(Type d'actions)
+\item
+  ETPP(Type d'actions) = ETPP LCTI x Temps passé(Type d'actions) / Temps passé(Actions LCTI)
+\item
+  Productivité(Taille/Type d'actions) = Production(Taille/Type d'actions) / ETPP(Taille/Type d'actions)
+\end{itemize}
+
+Le calcul du SPC obéit à la loi générale, il est déterminé pour chaque regroupement Taille/Type d'actions. Des productivités individuelles est déduite une moyenne, cette moyenne constitue la référence.
+
+Pour un organisme par Type d'actions, le score des productivités comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+\textbf{SPC = Effectif de référence / Effectif}
+
+ou
+
+\textbf{Productivité / Référence de produtivité}
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur 1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence.
+
+Il se décline également en « enjeu en ETP » :
+\textbf{Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)}
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité.
+
+\hypertarget{actions-pcap-203---etpp}{%
+\subsection{ACTIONS PCAP 203 - ETPP}\label{actions-pcap-203---etpp}}
+
+\hypertarget{actions-pcap-203---reference}{%
+\subsection{ACTIONS PCAP 203 - REFERENCE}\label{actions-pcap-203---reference}}
+
+\hypertarget{actions-pcap-203---spc}{%
+\subsection{ACTIONS PCAP 203 - SPC}\label{actions-pcap-203---spc}}
+
+\hypertarget{part-activituxe9s-services-productivituxe9s-basuxe9es-sur-le-nombre-de-comptes-actifs-1}{%
+\part{Activités services productivités basées sur le nombre de comptes actifs}\label{part-activituxe9s-services-productivituxe9s-basuxe9es-sur-le-nombre-de-comptes-actifs-1}}
+
+\hypertarget{lignes-rg-act}{%
+\chapter{LIGNES RG-ACT}\label{lignes-rg-act}}
+
+\hypertarget{les-donnees-4}{%
+\section{LES DONNEES}\label{les-donnees-4}}
+
+\begin{itemize}
+\item
+  les catégories de de cotisants Ogur : ``ACT'', ``ODS'', ``RG -10'', ``RG 10 à +50''
+\item
+  Les activités
+  Toutes les activités de service hors Fend, hors accueil téléphonique, hors Trésorerie-gestion R, hors Contrôle, hors LCTI, hors contrôle sur pièces (cf.~Annexe)
+\item
+  L'output : le nombre de comptes actifs (source Icare). Moyenne des 4 trimestres.
+\item
+  L'input : le nombre d'ETPP des activités citées (avec encadrement), moyenne des 4 trimestres
+\item
+  La mutualisation : pas de correction
+\end{itemize}
+
+\hypertarget{le-choix-de-la-reference-1}{%
+\section{LE CHOIX DE LA REFERENCE}\label{le-choix-de-la-reference-1}}
+
+La référence se calcule comme la moyenne des productivités individuelles hors valeurs extrêmes.
+
+Remarque : dans une moyenne de productivités individuelles, chaque organisme a le même poids dans le calcul. Cette moyenne est de fait plus sensible aux valeurs extrêmes, qu'il est donc nécessaire de détecter et d'éliminer.
+
+La détection s'effectue à l'aide de la méthode du Z-Score robuste.
+Il se calcule à l'aide de deux paramètres : la médiane et le MAD (Median Absolute Deviation, écart absolu médian).
+
+Z-Score(Productivité) = valeur absolue(Productivité - Médiane)/MAD
+
+\emph{Un Z-Score supérieur à 3 indique une valeur extrême}
+
+\hypertarget{le-calcul-du-spc-1}{%
+\section{LE CALCUL DU SPC}\label{le-calcul-du-spc-1}}
+
+Pour une activité du référentiel, le Score des Productivités Comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+\textbf{SPC = Effectif de référence / Effectif}
+
+ou
+
+\textbf{Productivité / Référence de produtivité}
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur 1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence.
+
+Il se décline également en « enjeu en ETP » :
+\textbf{Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)}
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité.
+
+\hypertarget{lignes-ge-tge}{%
+\chapter{LIGNES GE-TGE}\label{lignes-ge-tge}}
+
+\hypertarget{les-donnees-5}{%
+\section{LES DONNEES}\label{les-donnees-5}}
+
+\begin{itemize}
+\item
+  périmètre entité : Urssaf
+\item
+  les catégories de cotisants Ogur : ``TGE'', ``GE et VLU''
+\item
+  Les activités :
+  Toutes les activités de service hors Fend, hors accueil téléphonique, hors Trésorerie-gestion R, hors Contrôle, hors contrôle sur pièces
+\item
+  \textbf{L'output : le nombre de siren (source Sidéral)}
+\item
+  L'input : le nombre d'ETPP des activités citées (avec encadrement)
+\item
+  \textbf{Le facteur de charge : le nombre moyen de comptes par entreprise}.
+  Le nombre de comptes : nombre de comptes actifs (source Icare, moyenne des 4 trimestres)
+\item
+  La mutualisation : pas de correction
+\end{itemize}
+
+\hypertarget{le-choix-des-references-de-productivite}{%
+\section{LE CHOIX DES REFERENCES DE PRODUCTIVITE}\label{le-choix-des-references-de-productivite}}
+
+Le calcul de la référence de productivité repose sur 2 hypothèses issues des connaissances des experts métier :
+
+\begin{itemize}
+\item
+  L'agent gère une entreprise (et l'ensemble des comptes qui s'y rattachent) et pas seulement un compte. Donc, pour le calcul de la productivité l'Output est le nombre d'entreprises.
+\item
+  le nombre moyen de comptes par entreprise est un facteur de charge supplémentaire. Les opérations manuelles de gestion des comptes sont plus chronophages pour les entreprises ayant un plus grand nombre d' établissements
+\end{itemize}
+
+La prise en compte simultanée de ces deux éléments entraine \textbf{le choix d'une référence de productivité différenciée (propre à chaque organisme)}.
+
+La productivité liée au nombre moyen d'établissements par entreprise selon la relation suivante (estimation par régression linéaire) :
+
+\textbf{Productivité de référence = " " x Nombre moyen d'établissements}
+
+Les résultats statistiques détaillés sont fournis en annexe
+
+\hypertarget{le-calcul-du-spc-2}{%
+\section{LE CALCUL DU SPC}\label{le-calcul-du-spc-2}}
+
+Pour une activité du référentiel, le Score des Productivités Comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+\textbf{SPC = Effectif de référence / Effectif}
+
+ou
+
+\textbf{Productivité / Référence de produtivité}
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur 1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence.
+
+Il se décline également en « enjeu en ETP » :
+\textbf{Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)}
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité.
+
+\hypertarget{annexe-stat}{%
+\section{ANNEXE STAT}\label{annexe-stat}}
+
+\hypertarget{ligne-ae}{%
+\chapter{LIGNE AE}\label{ligne-ae}}
+
+\hypertarget{les-donnees-6}{%
+\section{LES DONNEES}\label{les-donnees-6}}
+
+\begin{itemize}
+\item
+  les catégories de de cotisants Ogur : ``Auto-entrepreneur''
+\item
+  Les activités :
+  Toutes les activités de service hors Fend, hors accueil téléphonique, hors Trésorerie-gestion R, hors Contrôle, hors contrôle sur pièces (cf.~Annexe)
+\item
+  L'output : le nombre de comptes actifs micro-entrepreneurs (source Icare). Moyenne des 4 trimestres.
+\item
+  L'input : le nombre d'ETPP des activités citées (avec encadrement), moyenne des 4 trimestres
+\item
+  La mutualisation : pas de correction
+\end{itemize}
+
+\hypertarget{le-choix-de-la-reference-2}{%
+\section{LE CHOIX DE LA REFERENCE}\label{le-choix-de-la-reference-2}}
+
+La référence se calcule comme la moyenne des productivités individuelles hors valeurs extrêmes.
+
+Remarque : dans une moyenne de productivités individuelles, chaque organisme a le même poids dans le calcul. Cette moyenne est de fait plus sensible aux valeurs extrêmes, qu'il est donc nécessaire de détecter et d'éliminer.
+
+La détection s'effectue à l'aide de la méthode du Z-Score robuste.
+Il se calcule à l'aide de deux paramètres : la médiane et le MAD (Median Absolute Deviation, écart absolu médian).
+
+Z-Score(Productivité) = valeur absolue(Productivité - Médiane)/MAD
+
+\emph{Un Z-Score supérieur à 3 indique une valeur extrême}
+
+\hypertarget{le-calcul-du-spc-3}{%
+\section{LE CALCUL DU SPC}\label{le-calcul-du-spc-3}}
+
+Pour une activité du référentiel, le Score des Productivités Comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+\textbf{SPC = Effectif de référence / Effectif}
+
+ou
+
+\textbf{Productivité / Référence de produtivité}
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur 1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence.
+
+Il se décline également en « enjeu en ETP » :
+\textbf{Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)}
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité.
+
+\hypertarget{liste-des-activites}{%
+\section{LISTE DES ACTIVITES}\label{liste-des-activites}}
+
+\hypertarget{ligne-ti-artisans-commercants}{%
+\chapter{LIGNE TI ARTISANS COMMERCANTS}\label{ligne-ti-artisans-commercants}}
+
+\hypertarget{les-donnees-7}{%
+\section{LES DONNEES}\label{les-donnees-7}}
+
+\begin{itemize}
+\item
+  les catégories de de cotisants Ogur : ``ETI hors PL''
+\item
+  Les activités :
+  Toutes les activités de service hors Fend, hors accueil téléphonique, hors Trésorerie-gestion R, hors Contrôle, hors contrôle sur pièces (cf.~Annexe)
+\item
+  L'output : le nombre de comptes actifs TI Artisans Commerçants (source Icare). Moyenne des 4 trimestres.
+\item
+  L'input : le nombre d'ETPP des activités citées (avec encadrement), moyenne des 4 trimestres
+\item
+  La mutualisation : pas de correction
+\end{itemize}
+
+\hypertarget{le-choix-de-la-reference-3}{%
+\section{LE CHOIX DE LA REFERENCE}\label{le-choix-de-la-reference-3}}
+
+La référence se calcule comme la moyenne des productivités individuelles hors valeurs extrêmes.
+
+Remarque : dans une moyenne de productivités individuelles, chaque organisme a le même poids dans le calcul. Cette moyenne est de fait plus sensible aux valeurs extrêmes, qu'il est donc nécessaire de détecter et d'éliminer.
+
+La détection s'effectue à l'aide de la méthode du Z-Score robuste.
+Il se calcule à l'aide de deux paramètres : la médiane et le MAD (Median Absolute Deviation, écart absolu médian).
+
+Z-Score(Productivité) = valeur absolue(Productivité - Médiane)/MAD
+
+\emph{Un Z-Score supérieur à 3 indique une valeur extrême}
+
+\hypertarget{le-calcul-du-spc-4}{%
+\section{LE CALCUL DU SPC}\label{le-calcul-du-spc-4}}
+
+Pour une activité du référentiel, le Score des Productivités Comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+\textbf{SPC = Effectif de référence / Effectif}
+
+ou
+
+\textbf{Productivité / Référence de produtivité}
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur 1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence.
+
+Il se décline également en « enjeu en ETP » :
+\textbf{Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)}
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité.
+
+\hypertarget{liste-des-activites-1}{%
+\section{LISTE DES ACTIVITES}\label{liste-des-activites-1}}
+
+\hypertarget{ligne-ti-pl}{%
+\chapter{LIGNE TI PL}\label{ligne-ti-pl}}
+
+\hypertarget{les-donnees-8}{%
+\section{LES DONNEES}\label{les-donnees-8}}
+
+\begin{itemize}
+\item
+  les catégories de de cotisants Ogur : ``ETI PL''
+\item
+  Les activités :
+  Toutes les activités de service hors Fend, hors accueil téléphonique, hors Trésorerie-gestion R, hors Contrôle, hors contrôle sur pièces (cf.~Annexe)
+\item
+  L'output : le nombre de comptes actifs TI PL (source Icare). Moyenne des 4 trimestres.
+\item
+  L'input : le nombre d'ETPP des activités citées (avec encadrement), moyenne des 4 trimestres
+\item
+  La mutualisation : pas de correction
+\end{itemize}
+
+\hypertarget{le-choix-de-la-reference-4}{%
+\section{LE CHOIX DE LA REFERENCE}\label{le-choix-de-la-reference-4}}
+
+La référence se calcule comme la moyenne des productivités individuelles hors valeurs extrêmes.
+
+Remarque : dans une moyenne de productivités individuelles, chaque organisme a le même poids dans le calcul. Cette moyenne est de fait plus sensible aux valeurs extrêmes, qu'il est donc nécessaire de détecter et d'éliminer.
+
+La détection s'effectue à l'aide de la méthode du Z-Score robuste.
+Il se calcule à l'aide de deux paramètres : la médiane et le MAD (Median Absolute Deviation, écart absolu médian).
+
+Z-Score(Productivité) = valeur absolue(Productivité - Médiane)/MAD
+
+\emph{Un Z-Score supérieur à 3 indique une valeur extrême}
+
+\hypertarget{le-calcul-du-spc-5}{%
+\section{LE CALCUL DU SPC}\label{le-calcul-du-spc-5}}
+
+Pour une activité du référentiel, le Score des Productivités Comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+\textbf{SPC = Effectif de référence / Effectif}
+
+ou
+
+\textbf{Productivité / Référence de produtivité}
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur 1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence.
+
+Il se décline également en « enjeu en ETP » :
+\textbf{Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)}
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité.
+
+\hypertarget{liste-des-activites-2}{%
+\section{LISTE DES ACTIVITES}\label{liste-des-activites-2}}
+
+\hypertarget{ligne-pam}{%
+\chapter{LIGNE PAM}\label{ligne-pam}}
+
+\hypertarget{les-donnees-9}{%
+\section{LES DONNEES}\label{les-donnees-9}}
+
+\begin{itemize}
+\item
+  les catégories de cotisants Ogur : ``TI PL PAM''
+\item
+  Les activités :
+  Toutes les activités de service hors Fend, hors accueil téléphonique, hors Trésorerie-gestion R, hors Contrôle, hors contrôle sur pièces (cf.~Annexe)
+\item
+  L'output : le nombre de comptes actifs PAM (source Icare). Moyenne des 4 trimestres.
+\item
+  L'input : le nombre d'ETPP des activités citées (avec encadrement), moyenne des 4 trimestres
+\item
+  La mutualisation : pas de correction
+\end{itemize}
+
+\hypertarget{le-choix-de-la-reference-1388-comptes-par-etpp}{%
+\section{LE CHOIX DE LA REFERENCE : 1388 COMPTES PAR ETPP}\label{le-choix-de-la-reference-1388-comptes-par-etpp}}
+
+La référence est déterminée par l'Acoss, à partir des études sur la centralisation de la gestion des comptes PAM sur quelques organismes.
+
+\hypertarget{le-calcul-du-spc-6}{%
+\section{LE CALCUL DU SPC}\label{le-calcul-du-spc-6}}
+
+Pour une activité du référentiel, le Score des Productivités Comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+\textbf{SPC = Effectif de référence / Effectif}
+
+ou
+
+\textbf{Productivité / Référence de produtivité}
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur 1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence.
+
+Il se décline également en « enjeu en ETP » :
+\textbf{Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)}
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité.
+
+\hypertarget{liste-des-activites-3}{%
+\section{LISTE DES ACTIVITES}\label{liste-des-activites-3}}
+
+\hypertarget{ligne-puma}{%
+\chapter{LIGNE PUMA}\label{ligne-puma}}
+
+\hypertarget{les-donnees-10}{%
+\section{LES DONNEES}\label{les-donnees-10}}
+
+\begin{itemize}
+\item
+  les catégories de cotisants Ogur : ``PUMA''
+\item
+  Les activités :
+  Toutes les activités de service hors Fend, hors accueil téléphonique, hors Trésorerie-gestion R, hors Contrôle, hors contrôle sur pièces (cf.~Annexe)
+\item
+  L'output : le nombre de comptes actifs PUMA (source Icare). Moyenne des 4 trimestres.
+\item
+  L'input : le nombre d'ETPP des activités citées (avec encadrement), moyenne des 4 trimestres
+\item
+  La mutualisation : pas de correction
+\end{itemize}
+
+\hypertarget{le-choix-de-la-reference-5}{%
+\section{LE CHOIX DE LA REFERENCE}\label{le-choix-de-la-reference-5}}
+
+La référence se calcule comme la moyenne des productivités individuelles hors valeurs extrêmes.
+
+Remarque : dans une moyenne de productivités individuelles, chaque organisme a le même poids dans le calcul. Cette moyenne est de fait plus sensible aux valeurs extrêmes, qu'il est donc nécessaire de détecter et d'éliminer.
+
+La détection s'effectue à l'aide de la méthode du Z-Score robuste.
+Il se calcule à l'aide de deux paramètres : la médiane et le MAD (Median Absolute Deviation, écart absolu médian).
+
+Z-Score(Productivité) = valeur absolue(Productivité - Médiane)/MAD
+
+\emph{Un Z-Score supérieur à 3 indique une valeur extrême}
+
+\hypertarget{le-calcul-du-spc-7}{%
+\section{LE CALCUL DU SPC}\label{le-calcul-du-spc-7}}
+
+Pour une activité du référentiel, le Score des Productivités Comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+\textbf{SPC = Effectif de référence / Effectif}
+
+ou
+
+\textbf{Productivité / Référence de produtivité}
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur 1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence.
+
+Il se décline également en « enjeu en ETP » :
+\textbf{Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)}
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité.
+
+\hypertarget{liste-des-activites-4}{%
+\section{LISTE DES ACTIVITES}\label{liste-des-activites-4}}
+
+\hypertarget{ligne-divers}{%
+\chapter{LIGNE DIVERS}\label{ligne-divers}}
+
+\hypertarget{les-donnees-11}{%
+\section{LES DONNEES}\label{les-donnees-11}}
+
+\begin{itemize}
+\item
+  les catégories de cotisants Ogur : ``EGM'', ``Divers''
+\item
+  Les activités :
+  Toutes les activités de service hors Fend, hors accueil téléphonique, hors Trésorerie-gestion R, hors Contrôle, hors contrôle sur pièces (cf.~Annexe)
+\item
+  L'output : le nombre de comptes actifs (source Icare). Moyenne des 4 trimestres.
+\item
+  L'input : le nombre d'ETPP des activités citées (avec encadrement), moyenne des 4 trimestres
+\item
+  La mutualisation : pas de correction
+\end{itemize}
+
+\hypertarget{le-choix-de-la-reference-6}{%
+\section{LE CHOIX DE LA REFERENCE}\label{le-choix-de-la-reference-6}}
+
+La référence se calcule comme la moyenne des productivités individuelles hors valeurs extrêmes.
+
+Remarque : dans une moyenne de productivités individuelles, chaque organisme a le même poids dans le calcul. Cette moyenne est de fait plus sensible aux valeurs extrêmes, qu'il est donc nécessaire de détecter et d'éliminer.
+
+La détection s'effectue à l'aide de la méthode du Z-Score robuste.
+Il se calcule à l'aide de deux paramètres : la médiane et le MAD (Median Absolute Deviation, écart absolu médian).
+
+Z-Score(Productivité) = valeur absolue(Productivité - Médiane)/MAD
+
+\emph{Un Z-Score supérieur à 3 indique une valeur extrême}
+
+\hypertarget{le-calcul-du-spc-8}{%
+\section{LE CALCUL DU SPC}\label{le-calcul-du-spc-8}}
+
+Pour une activité du référentiel, le Score des Productivités Comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+\textbf{SPC = Effectif de référence / Effectif}
+
+ou
+
+\textbf{Productivité / Référence de produtivité}
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur 1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence.
+
+Il se décline également en « enjeu en ETP » :
+\textbf{Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)}
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité.
+
+\hypertarget{liste-des-activites-5}{%
+\section{LISTE DES ACTIVITES}\label{liste-des-activites-5}}
+
+\hypertarget{lignes-cnt}{%
+\chapter{LIGNES CNT}\label{lignes-cnt}}
+
+\hypertarget{les-donnuxe9es-2}{%
+\section{LES DONNÉES}\label{les-donnuxe9es-2}}
+
+\begin{itemize}
+\item
+  Les centres :
+  TESE
+  CEA
+  CESU
+  PAJE
+  FRONTALIERS SUISSES
+  CNFE (centre national des firmes étrangères)
+  CNEC (centre national économie collaborative)
+  AGESSA (association pour la gestion de la sécurité sociale des Auteurs)
+  LABO (recouvrement entreprises pharmaceutiques)
+\item
+  Les activités par entité
+  Toutes les activités \textbf{hors accueil téléphonique} sont retenues.
+  .
+\item
+  L'output : le nombre de comptes actifs (source Icare). Moyenne des 4 trimestres.
+\item
+  L'input : le nombre d'ETPP des activités citées (avec encadrement), moyenne des 4 trimestres
+\item
+  La mutualisation : pas de correction
+\end{itemize}
+
+Les centres TESE et CEA sont regroupés TESE-CEA.
+
+\hypertarget{le-choix-de-la-reference-7}{%
+\section{LE CHOIX DE LA REFERENCE}\label{le-choix-de-la-reference-7}}
+
+Par CNT, la référence de productivité est égale à moyenne des productivités individuelles des organismes qui assurent la gestion du centre de traitement.
+Dans le cas où l'activité est gérée par un seul organisme, la référence est égale à la productivité constatée en 2019.
+
+\hypertarget{le-calcul-du-spc-9}{%
+\section{LE CALCUL DU SPC}\label{le-calcul-du-spc-9}}
+
+Pour une activité du référentiel, le Score des Productivités Comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+\textbf{SPC = Effectif de référence / Effectif}
+
+ou
+
+\textbf{Productivité / Référence de produtivité}
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur 1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence.
+
+Il se décline également en « enjeu en ETP » :
+\textbf{Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)}
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité.
+
+\hypertarget{liste-des-activites-6}{%
+\section{LISTE DES ACTIVITES}\label{liste-des-activites-6}}
+
+\hypertarget{cesu-paje-tese-cea-frontaliers}{%
+\subsection{CESU, PAJE, TESE, CEA, FRONTALIERS}\label{cesu-paje-tese-cea-frontaliers}}
+
+\hypertarget{cnfe-cnec-agessa-labo}{%
+\subsection{CNFE, CNEC, AGESSA, LABO}\label{cnfe-cnec-agessa-labo}}
+
+\hypertarget{part-activituxe9s-support}{%
+\part{Activités support}\label{part-activituxe9s-support}}
+
+\hypertarget{informatique}{%
+\chapter{INFORMATIQUE}\label{informatique}}
+
+\hypertarget{les-donnees-12}{%
+\section{LES DONNEES}\label{les-donnees-12}}
+
+\begin{itemize}
+\item
+  Les activités, les entitées
+\item
+  Les effectifs
+  Les effectifs sont issus de la base Icare.
+  Il s'agit des effectifs présents à la production, pour tous les types de contrats, y compris encadrement (ETPP phase 3 + part d'encadrement phase 5)
+\item
+  L'output : le nombre de personnes physiques
+  Nombre d'agents présents à le fin du trimestre (source Icare/ Analyse patrimoniale). Moyenne des 4 trimestres.
+\item
+  La mutualisation : correction (vision prestataire)
+\end{itemize}
+
+\hypertarget{vision-prestataire-prise-en-compte-de-la-mutualisation-1}{%
+\section{VISION PRESTATAIRE : PRISE EN COMPTE DE LA MUTUALISATION}\label{vision-prestataire-prise-en-compte-de-la-mutualisation-1}}
+
+La gestion de la mutualisation est réalisée en 3 étapes :
+
+\begin{itemize}
+\item
+  la définition du périmètre de mutualisation : qui sont les prestataires ? qui sont les clients ? Un nouveau calcul d'ETPP et d'Output par consolidation des données sur le nouveau périmètre (Clients + Prestataires)
+\item
+  le calcul de la référence de productivité sur le nouveau périmètre
+\item
+  la correction de l'Output, avec utilisation de la référence de productivité
+\end{itemize}
+
+\hypertarget{definition-du-perimetre-de-mutualisation-1}{%
+\subsection{DEFINITION DU PERIMETRE DE MUTUALISATION}\label{definition-du-perimetre-de-mutualisation-1}}
+
+Quels prestataires ? quels clients ?
+
+\hypertarget{calcul-de-la-reference-de-productivite-1}{%
+\subsection{CALCUL DE LA REFERENCE DE PRODUCTIVITE}\label{calcul-de-la-reference-de-productivite-1}}
+
+La référence se calcule comme la moyenne des productivités individuelles hors valeurs extrêmes.
+
+Remarque : dans une moyenne de productivités individuelles, chaque organisme a le même poids dans le calcul. Cette moyenne est de fait plus sensible aux valeurs extrêmes, qu'il est donc nécessaire de détecter et d'éliminer.
+
+La détection s'effectue à l'aide de la méthode du Z-Score robuste.
+Il se calcule à l'aide de deux paramètres : la médiane et le MAD (Median Absolute Deviation, écart absolu médian).
+
+Z-Score(Productivité) = (Productivité - Médiane)/MAD
+
+\emph{Un Z-Score supérieur à 3 en valeur absolue indique une valeur extrême}
+
+\hypertarget{correction-de-louput-1}{%
+\subsection{CORRECTION DE L'OUPUT}\label{correction-de-louput-1}}
+
+L'exploitation de la référence de productivité permet de corriger l'output par un transfert positif vers le prestataire et négatif vers le client.
+Dans ses effectifs, le prestataire conserve les effectifs mutualisés qui travaillent pour le client.
+
+\hypertarget{donnuxe9es-corriguxe9es-1}{%
+\section{DONNÉES CORRIGÉES}\label{donnuxe9es-corriguxe9es-1}}
+
+\hypertarget{achats-marches-logistique-aml}{%
+\chapter{ACHATS MARCHES LOGISTIQUE (AML)}\label{achats-marches-logistique-aml}}
+
+\hypertarget{les-donnees-13}{%
+\section{LES DONNEES}\label{les-donnees-13}}
+
+\begin{itemize}
+\item
+  Les activités, les entitées
+\item
+  Les effectifs
+  Les effectifs sont issus de la base Icare.
+  Il s'agit des effectifs présents à la production, pour tous les types de contrats, y compris encadrement (ETPP phase 3 + part d'encadrement phase 5)
+\item
+  L'output : le nombre de personnes physiques
+  Nombre d'agents présents à le fin du trimestre (source Icare/ Analyse patrimoniale). Moyenne des 4 trimestres.
+\item
+  La mutualisation : correction (vision prestataire)
+\end{itemize}
+
+\hypertarget{vision-prestataire-prise-en-compte-de-la-mutualisation-2}{%
+\section{VISION PRESTATAIRE : PRISE EN COMPTE DE LA MUTUALISATION}\label{vision-prestataire-prise-en-compte-de-la-mutualisation-2}}
+
+La gestion de la mutualisation est réalisée en 3 étapes :
+
+\begin{itemize}
+\item
+  la définition du périmètre de mutualisation : qui sont les prestataires ? qui sont les clients ? Un nouveau calcul d'ETPP et d'Output par consolidation des données sur le nouveau périmètre (Clients + Prestataires)
+\item
+  le calcul de la référence de productivité sur le nouveau périmètre
+\item
+  la correction de l'Output, avec utilisation de la référence de productivité
+\end{itemize}
+
+\hypertarget{definition-du-perimetre-de-mutualisation-2}{%
+\subsection{DEFINITION DU PERIMETRE DE MUTUALISATION}\label{definition-du-perimetre-de-mutualisation-2}}
+
+Quels prestataires ? quels clients ?
+
+\hypertarget{calcul-de-la-reference-de-productivite-2}{%
+\subsection{CALCUL DE LA REFERENCE DE PRODUCTIVITE}\label{calcul-de-la-reference-de-productivite-2}}
+
+La référence se calcule comme la moyenne des productivités individuelles hors valeurs extrêmes.
+
+Remarque : dans une moyenne de productivités individuelles, chaque organisme a le même poids dans le calcul. Cette moyenne est de fait plus sensible aux valeurs extrêmes, qu'il est donc nécessaire de détecter et d'éliminer.
+
+La détection s'effectue à l'aide de la méthode du Z-Score robuste.
+Il se calcule à l'aide de deux paramètres : la médiane et le MAD (Median Absolute Deviation, écart absolu médian).
+
+Z-Score(Productivité) = (Productivité - Médiane)/MAD
+
+\emph{Un Z-Score supérieur à 3 en valeur absolue indique une valeur extrême}
+
+\hypertarget{correction-de-louput-2}{%
+\subsection{CORRECTION DE L'OUPUT}\label{correction-de-louput-2}}
+
+L'exploitation de la référence de productivité permet de corriger l'output par un transfert positif vers le prestataire et négatif vers le client.
+Dans ses effectifs, le prestataire conserve les effectifs mutualisés qui travaillent pour le client.
+
+\hypertarget{donnuxe9es-corriguxe9es-2}{%
+\section{DONNÉES CORRIGÉES}\label{donnuxe9es-corriguxe9es-2}}
+
+\hypertarget{gestion-et-verification-comptable-ga}{%
+\chapter{GESTION ET VERIFICATION COMPTABLE GA}\label{gestion-et-verification-comptable-ga}}
+
+\hypertarget{les-donnees-14}{%
+\section{LES DONNEES}\label{les-donnees-14}}
+
+\begin{itemize}
+\item
+  Les activités, les entitées
+\item
+  Les effectifs
+  Les effectifs sont issus de la base Icare.
+  Il s'agit des effectifs présents à la production, pour tous les types de contrats, y compris encadrement (ETPP phase 3 + part d'encadrement phase 5)
+\item
+  L'output : le nombre de personnes physiques
+  Nombre d'agents présents à le fin du trimestre (source Icare/ Analyse patrimoniale). Moyenne des 4 trimestres.
+\item
+  La mutualisation : correction (vision prestataire)
+\end{itemize}
+
+\hypertarget{vision-prestataire-prise-en-compte-de-la-mutualisation-3}{%
+\section{VISION PRESTATAIRE : PRISE EN COMPTE DE LA MUTUALISATION}\label{vision-prestataire-prise-en-compte-de-la-mutualisation-3}}
+
+La gestion de la mutualisation est réalisée en 3 étapes :
+
+\begin{itemize}
+\item
+  la définition du périmètre de mutualisation : qui sont les prestataires ? qui sont les clients ? Un nouveau calcul d'ETPP et d'Output par consolidation des données sur le nouveau périmètre (Clients + Prestataires)
+\item
+  le calcul de la référence de productivité sur le nouveau périmètre
+\item
+  la correction de l'Output, avec utilisation de la référence de productivité
+\end{itemize}
+
+\hypertarget{definition-du-perimetre-de-mutualisation-3}{%
+\subsection{DEFINITION DU PERIMETRE DE MUTUALISATION}\label{definition-du-perimetre-de-mutualisation-3}}
+
+Quels prestataires ? quels clients ?
+
+Le tableau s'arrête au champ Urssaf. L'Acoss et la DSI sont clientes de la région Centre Val de Loire (impact sur l'activité comptable de la gestion du CNPR).
+
+Dans les calculs, le périmètre de mutualisation de la région Centre est exclue. En effet la donnée ``nombre de
+personnes physiques'' de l'Acoss n'est pas encore présente dans le champ de l'outil de consolidation Icare.
+
+\hypertarget{calcul-de-la-reference-de-productivite-3}{%
+\subsection{CALCUL DE LA REFERENCE DE PRODUCTIVITE}\label{calcul-de-la-reference-de-productivite-3}}
+
+La référence se calcule comme la moyenne des productivités individuelles hors valeurs extrêmes.
+
+Remarque : dans une moyenne de productivités individuelles, chaque organisme a le même poids dans le calcul. Cette moyenne est de fait plus sensible aux valeurs extrêmes, qu'il est donc nécessaire de détecter et d'éliminer.
+
+La détection s'effectue à l'aide de la méthode du Z-Score robuste.
+Il se calcule à l'aide de deux paramètres : la médiane et le MAD (Median Absolute Deviation, écart absolu médian).
+
+Z-Score(Productivité) = (Productivité - Médiane)/MAD
+
+\emph{Un Z-Score supérieur à 3 en valeur absolue indique une valeur extrême}
+
+\hypertarget{correction-de-louput-3}{%
+\subsection{CORRECTION DE L'OUPUT}\label{correction-de-louput-3}}
+
+L'exploitation de la référence de productivité permet de corriger l'output par un transfert positif vers le prestataire et négatif vers le client.
+Dans ses effectifs, le prestataire conserve les effectifs mutualisés qui travaillent pour le client.
+
+\hypertarget{donnuxe9es-corriguxe9es-3}{%
+\section{DONNÉES CORRIGÉES}\label{donnuxe9es-corriguxe9es-3}}
+
+\hypertarget{rh-et-gestion-administrative-du-personnel}{%
+\chapter{RH ET GESTION ADMINISTRATIVE DU PERSONNEL}\label{rh-et-gestion-administrative-du-personnel}}
+
+\hypertarget{les-donnees-15}{%
+\section{LES DONNEES}\label{les-donnees-15}}
+
+\begin{itemize}
+\item
+  Les activités, les entitées
+\item
+  Les effectifs
+  Les effectifs sont issus de la base Icare.
+  Il s'agit des effectifs présents à la production, pour tous les types de contrats, y compris encadrement (ETPP phase 3 + part d'encadrement phase 5)
+\item
+  L'output : le nombre de personnes physiques
+  Nombre d'agents présents à le fin du trimestre (source Icare/ Analyse patrimoniale). Moyenne des 4 trimestres.
+\item
+  La mutualisation : correction (vision prestataire)
+\end{itemize}
+
+\hypertarget{vision-prestataire-prise-en-compte-de-la-mutualisation-4}{%
+\section{VISION PRESTATAIRE : PRISE EN COMPTE DE LA MUTUALISATION}\label{vision-prestataire-prise-en-compte-de-la-mutualisation-4}}
+
+La gestion de la mutualisation est réalisée en 3 étapes :
+
+\begin{itemize}
+\item
+  la définition du périmètre de mutualisation : qui sont les prestataires ? qui sont les clients ? Un nouveau calcul d'ETPP et d'Output par consolidation des données sur le nouveau périmètre (Clients + Prestataires)
+\item
+  le calcul de la référence de productivité sur le nouveau périmètre
+\item
+  la correction de l'Output, avec utilisation de la référence de productivité
+\end{itemize}
+
+\hypertarget{definition-du-perimetre-de-mutualisation-4}{%
+\subsection{DEFINITION DU PERIMETRE DE MUTUALISATION}\label{definition-du-perimetre-de-mutualisation-4}}
+
+Quels prestataires ? quels clients ?
+
+\hypertarget{calcul-de-la-reference-de-productivite-4}{%
+\subsection{CALCUL DE LA REFERENCE DE PRODUCTIVITE}\label{calcul-de-la-reference-de-productivite-4}}
+
+La référence se calcule comme la moyenne des productivités individuelles hors valeurs extrêmes.
+
+Remarque : dans une moyenne de productivités individuelles, chaque organisme a le même poids dans le calcul. Cette moyenne est de fait plus sensible aux valeurs extrêmes, qu'il est donc nécessaire de détecter et d'éliminer.
+
+La détection s'effectue à l'aide de la méthode du Z-Score robuste.
+Il se calcule à l'aide de deux paramètres : la médiane et le MAD (Median Absolute Deviation, écart absolu médian).
+
+Z-Score(Productivité) = (Productivité - Médiane)/MAD
+
+\emph{Un Z-Score supérieur à 3 en valeur absolue indique une valeur extrême}
+
+\hypertarget{correction-de-louput-4}{%
+\subsection{CORRECTION DE L'OUPUT}\label{correction-de-louput-4}}
+
+L'exploitation de la référence de productivité permet de corriger l'output par un transfert positif vers le prestataire et négatif vers le client.
+Dans ses effectifs, le prestataire conserve les effectifs mutualisés qui travaillent pour le client.
+
+\hypertarget{donnuxe9es-corriguxe9es-4}{%
+\section{DONNÉES CORRIGÉES}\label{donnuxe9es-corriguxe9es-4}}
+
+\hypertarget{gestion-de-la-paie}{%
+\chapter{GESTION DE LA PAIE}\label{gestion-de-la-paie}}
+
+\hypertarget{les-donnees-16}{%
+\section{LES DONNEES}\label{les-donnees-16}}
+
+\begin{itemize}
+\item
+  Les activités, les entitées
+\item
+  Les effectifs
+  Les effectifs sont issus de la base Icare.
+  Il s'agit des effectifs présents à la production, pour tous les types de contrats, y compris encadrement (ETPP phase 3 + part d'encadrement phase 5)
+\item
+  L'output :
+  Pour les Centres Nationaux de Traitement de la Paie du Recouvrement CNPR : le nombre de bulletins de salaire moyen mensuel
+\end{itemize}
+
+Pour les autres organismes : le nombre de personnes physiques
+Nombre d'agents présents à le fin du trimestre (source Icare/ Analyse patrimoniale). Moyenne des 4 trimestres.
+
+\begin{itemize}
+\tightlist
+\item
+  La mutualisation : correction (vision prestataire)
+\end{itemize}
+
+\hypertarget{vision-prestataire-prise-en-compte-de-la-mutualisation-5}{%
+\section{VISION PRESTATAIRE : PRISE EN COMPTE DE LA MUTUALISATION}\label{vision-prestataire-prise-en-compte-de-la-mutualisation-5}}
+
+La gestion de la mutualisation est réalisée en 3 étapes :
+
+\begin{itemize}
+\item
+  la définition du périmètre de mutualisation : qui sont les prestataires ? qui sont les clients ? Un nouveau calcul d'ETPP et d'Output par consolidation des données sur le nouveau périmètre (Clients + Prestataires)
+\item
+  le calcul de la référence de productivité sur le nouveau périmètre
+\item
+  la correction de l'Output, avec utilisation de la référence de productivité
+\end{itemize}
+
+\hypertarget{definition-du-perimetre-de-mutualisation-5}{%
+\subsection{DEFINITION DU PERIMETRE DE MUTUALISATION}\label{definition-du-perimetre-de-mutualisation-5}}
+
+Quels prestataires ? quels clients ?
+
+\hypertarget{calcul-de-la-reference-de-productivite-5}{%
+\subsection{CALCUL DE LA REFERENCE DE PRODUCTIVITE}\label{calcul-de-la-reference-de-productivite-5}}
+
+La référence de productivité est définie par le niveau national est s'élève à \textbf{300 bulletins de salaire par agent}
+
+Le SPC est donc calculé pour l'ensemble des organismes sur la base de cette référence.
+
+\emph{Pour les organismes clients des CNPR, sur l'activité résiduelle de traitement de la paie, la référence n'est pas utilisée. Le SPC est valorisé à 100\%, les ETPP de référence sont égaux aux ETPP.}
+
+\hypertarget{donnuxe9es-corriguxe9es-5}{%
+\section{DONNÉES CORRIGÉES}\label{donnuxe9es-corriguxe9es-5}}
+
+\hypertarget{pilotage-et-aide-au-pilotage}{%
+\chapter{PILOTAGE ET AIDE AU PILOTAGE}\label{pilotage-et-aide-au-pilotage}}
+
+\hypertarget{les-donnees-17}{%
+\section{LES DONNEES}\label{les-donnees-17}}
+
+• Les activités, les entités
+Toutes les activités pilotage et aide au pilotage sont présentes dans le périmètre de calcul de l'indicateur.
+Une seule exception l'activité ``Mutualisation Pilotage'' (OM10) réservée aux ADD en charge du pilotage des
+caisses déléguées TI.
+
+• L'output : le nombre de personnes physiques de l'organisme pour l'ensemble des activités (y compris
+centres de validation, activités nationales, vie sociale, formation) Nombre d'agents présents à le fin du
+trimestre (source Icare/ Analyse patrimoniale). Moyenne des 4 trimestres.
+
+• L'input de nombre d'ETP présents à la production (avec encadrement) sur les activités citées.
+
+• La mutualisation : \textbf{pas de correction}
+
+\hypertarget{calcul-du-spc}{%
+\section{CALCUL DU SPC}\label{calcul-du-spc}}
+
+Le calcul du score se base sur la relation entre les effectifs consacrés aux ativités de pilotage et les personnes physiques présentes dans les organismes.
+
+\hypertarget{le-choix-de-la-reference-8}{%
+\subsection{LE CHOIX DE LA REFERENCE}\label{le-choix-de-la-reference-8}}
+
+La méthode utilisée diffère du calcul habituel de la moyenne.
+Le principe est de construire une droite de regression qui exprime le mieux la relation entre le nombre de personnes physiques et les ETPP consacrés aux activités pilotage et aide au pilotage.
+
+\textbf{ETPP de référence = " .. " x Output }
+
+Output : nbre de personnes physiques
+
+Ainsi déterminés par le modèle de régression, les ETPP de référence permettent le calcul d'une productivité de référence, par construction identique pour chaque organisme.
+
+Référence = Output / ETPP\_ref
+
+\hypertarget{resultats}{%
+\section{RESULTATS}\label{resultats}}
+
+Le SPC se calcule ensuite selon la méthode habituelle.
+
+\hypertarget{annexe-statistique}{%
+\subsection{ANNEXE STATISTIQUE}\label{annexe-statistique}}
+
+\hypertarget{autres}{%
+\chapter{AUTRES}\label{autres}}
+
+Les activités et effectifs hors du périmètre du le calcul du SPC :
+
+• les activités nationales,
+
+• \emph{les activités des centres de validation} ,
+
+• \emph{la formation},
+
+• la vie sociale.
+
+• l'activité pilotage mutualisée pour les agents de direction en Urssaf en charge de la gestion des caisses déléguées de travailleurs indépendants. (Activité OM10, avec organisme client =``999999'')
+
+• l'activités de service mutualisée à destination CGSS ou organismes hors banche recouvrement(Activité OMxx, avec organisme client =``999999'')
+
+La donnée effectifs : le nombre d'ETPP des activités citées (avec encadrement), moyenne des 4 trimestres
+
+\hypertarget{donnees-effectifs}{%
+\section{DONNEES EFFECTIFS}\label{donnees-effectifs}}
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}

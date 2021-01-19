@@ -1,0 +1,42 @@
+# LIGNE PAM
+
+## LES DONNEES
+
+- les catégories de cotisants Ogur : "TI PL PAM"
+
+- Les activités :
+Toutes les activités de service hors Fend, hors accueil téléphonique, hors Trésorerie-gestion R, hors Contrôle, hors contrôle sur pièces (cf. Annexe)
+
+- L'output : le nombre de comptes actifs PAM (source Icare). Moyenne des 4 trimestres.
+
+- L'input : le nombre d'ETPP des activités citées (avec encadrement), moyenne des 4 trimestres 
+
+- La mutualisation : pas de correction
+
+## LE CHOIX DE LA REFERENCE : 1388 COMPTES PAR ETPP
+
+La référence est déterminée par l'Acoss, à partir des études sur la centralisation de la gestion des comptes PAM sur quelques organismes.
+
+
+
+## LE CALCUL DU SPC
+
+Pour une activité du référentiel, le Score des Productivités Comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+**SPC = Effectif de référence / Effectif** 
+
+ou 
+
+**Productivité / Référence de produtivité**
+
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur  1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence. 
+
+Il se décline également en « enjeu en ETP »  : 
+**Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)**
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité. 
+
+## LISTE DES ACTIVITES

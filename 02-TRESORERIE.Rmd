@@ -1,0 +1,50 @@
+
+# TRESORERIE - FLUX FINANCIERS - GESTION R
+
+## LES DONNÉES
+
+Le périmètre contient : 
+
+- 3 activités sont consolidées pour le calcul des ETPP : **gestion et prévision de la trésorerie(OG5, OM5), gestion des titres financiers et des impayés (OG5a, OM5a) et gestion R et S (OG62, OM62)**
+
+- 1 inducteur de production: **le nombre de mouvements issus de Soft (bruts et impayés) y compris impayés de téléréglements et de prélèvements** (source Ogur/Soft). Cet indicateur est celui utilisé dans Ogur pour les activités gestion de la trésorerie et gestion des titres financiers. Concernant la gestion R et S, l'inducteur est le nombre d'écritures de crédits.
+
+
+## LES DONNÉES BRUTES
+
+
+
+## VISION PRESTATAIRE : PRISE EN COMPTE DE LA MUTUALISATION
+
+La gestion de la mutualisation est réalisée en 3 étapes :
+
+- la définition du périmètre de mutualisation : qui sont les prestataires ?  qui sont les clients ? Un nouveau calcul d'ETPP et d'Output par consolidation des données sur le nouveau périmètre (Clients + Prestataires) 
+
+
+- le calcul de la référence de productivité sur le nouveau périmètre
+
+- la correction de l'Output, avec utilisation de la référence de productivité
+
+### DEFINITION DU PERIMETRE DE MUTUALISATION
+
+Quels prestataires ? quels clients ?
+
+Un recalcul des effectifs et des outputs, les clients sont rapprochés des prestataires.
+
+
+
+### CALCUL DE LA REFERENCE DE PRODUCTIVITE
+
+
+L'utilisation du Z-score robuste ne fait ressortir aucune valeur extrême. Toutes les valeurs sont inférieures à 3.
+La référence de productivité est donc égale à la moyenne des productivités individuelles calculées sur le périmètre de mutualisation.
+
+
+### CORRECTION DE L'OUPUT
+
+L'exploitation de la référence de productivité permet de corriger l'output par un transfert positif vers le prestataire et négatif vers le client.
+
+
+
+## DONNÉES CORRIGÉES
+

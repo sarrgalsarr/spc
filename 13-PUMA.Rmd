@@ -1,0 +1,51 @@
+# LIGNE PUMA
+
+## LES DONNEES
+
+- les catégories de cotisants Ogur : "PUMA"
+
+- Les activités :
+Toutes les activités de service hors Fend, hors accueil téléphonique, hors Trésorerie-gestion R, hors Contrôle, hors contrôle sur pièces (cf. Annexe)
+
+- L'output : le nombre de comptes actifs PUMA (source Icare). Moyenne des 4 trimestres.
+
+- L'input : le nombre d'ETPP des activités citées (avec encadrement), moyenne des 4 trimestres 
+
+- La mutualisation : pas de correction
+
+## LE CHOIX DE LA REFERENCE
+
+La référence se calcule comme la moyenne des productivités individuelles hors valeurs extrêmes.
+
+Remarque : dans une moyenne de productivités individuelles, chaque organisme a le même poids dans le calcul. Cette moyenne est de fait plus sensible aux valeurs extrêmes, qu'il est donc nécessaire de détecter et d'éliminer. 
+
+La détection s'effectue à l'aide de la méthode du Z-Score robuste.
+Il se calcule à l'aide de deux paramètres : la médiane et le MAD (Median Absolute Deviation, écart absolu médian).
+
+Z-Score(Productivité) = valeur absolue(Productivité - Médiane)/MAD
+
+*Un Z-Score supérieur à 3 indique une valeur extrême*
+
+## LE CALCUL DU SPC
+
+Pour une activité du référentiel, le Score des Productivités Comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+**SPC = Effectif de référence / Effectif** 
+
+ou 
+
+**Productivité / Référence de produtivité**
+
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur  1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence. 
+
+Il se décline également en « enjeu en ETP »  : 
+**Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)**
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité. 
+
+
+## LISTE DES ACTIVITES
+

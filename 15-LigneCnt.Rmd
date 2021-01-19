@@ -1,0 +1,64 @@
+# LIGNES CNT
+
+## LES DONNÉES
+- Les centres : 
+  TESE
+  CEA
+  CESU
+  PAJE
+  FRONTALIERS SUISSES
+  CNFE (centre national des firmes étrangères) 
+  CNEC (centre national économie collaborative)
+  AGESSA (association pour la gestion de la sécurité sociale des Auteurs)
+  LABO (recouvrement entreprises pharmaceutiques)
+
+- Les activités par entité
+Toutes les activités **hors accueil téléphonique** sont retenues.
+.
+
+- L'output : le nombre de comptes actifs (source Icare). Moyenne des 4 trimestres.
+
+- L'input : le nombre d'ETPP des activités citées (avec encadrement), moyenne des 4 trimestres 
+
+- La mutualisation : pas de correction
+
+
+Les centres TESE et CEA sont regroupés TESE-CEA.
+
+
+
+
+## LE CHOIX DE LA REFERENCE
+
+Par CNT, la référence de productivité est égale à moyenne des productivités individuelles des organismes qui assurent la gestion du centre de traitement.
+Dans le cas où l'activité est gérée par un seul organisme, la référence est égale à la productivité constatée en 2019.
+
+
+## LE CALCUL DU SPC
+
+Pour une activité du référentiel, le Score des Productivités Comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+**SPC = Effectif de référence / Effectif** 
+
+ou 
+
+**Productivité / Référence de produtivité**
+
+
+Le SPC mesure l'écart à la référence de productivité. Un score proche de la valeur  1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence. 
+
+Il se décline également en « enjeu en ETP »  : 
+**Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)**
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité. 
+
+## LISTE DES ACTIVITES
+
+### CESU, PAJE, TESE, CEA, FRONTALIERS
+
+
+### CNFE, CNEC, AGESSA, LABO
+
+

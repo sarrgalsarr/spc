@@ -1,0 +1,26 @@
+# AUTRES
+
+Les activités et effectifs hors du périmètre du le calcul du SPC :
+
+• les activités nationales, 
+
+• *les activités des centres de validation* ,
+
+• *la formation*, 
+
+• la vie sociale.
+
+• l’activité pilotage mutualisée pour les agents de direction en Urssaf en charge de la gestion des caisses déléguées de travailleurs indépendants. (Activité OM10, avec organisme client =“999999”)
+
+• l’activités de service mutualisée à destination CGSS ou organismes hors banche recouvrement(Activité OMxx, avec organisme client =“999999”)
+
+
+
+La donnée effectifs : le nombre d’ETPP des activités citées (avec encadrement), moyenne des 4 trimestres
+
+
+## DONNEES EFFECTIFS 
+
+
+
+

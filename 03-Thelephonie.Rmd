@@ -1,0 +1,61 @@
+# ACCUEIL TELEPHONIQUE
+
+## LES DONNÉES
+
+Les effectifs sont issus de la base Icare. Pour chaque organisme, sont recueillis tous les effectifs qui pointent sur les activités **"accueil téléphonique (Niveau 1) et ASDM"**, qu'elles soient mutualisées ou non. Il s'agit dans la langue ogurienne des activités OG10221, OM10221, OMb10221 et OM10221a.
+
+**Les entités concernées : URSSAF, CESU, PAJE, FRONTALIERS SUISSES, TESE, CEA **
+
+
+Le volume d'**appels téléphoniques aboutis** est extrait de la base Sidéral, il s'agit des appels traités par chaque organisme ("par qui"), peu importe le destinataire de l'appel ("pour qui").
+Sont pris en compte, les appels traités par l'organisme, Urssaf et autres entités.
+
+Le calcul du SPC s'inscrit donc bien dans la vision prestataire.
+
+## LE CALCUL DU SPC, UN SPC PAR OFFRE
+
+**La productivité de chaque organisme est calculée par offre de service.**
+
+Par offre de service, le volume de production - le nombre d'appels aboutis - est connu et extrait de Sidéral.
+
+Par offre de service, les effectifs ETPP sont estimés à partir des ETPP issus d'Ogur auxquels s'appliquent une clé de répartition.
+
+Cette clé est égale au rapport entre Temps passé sur l'offre et le temps passé sur l'ensemble des offres. Ces données sont extraites de Sidéral.
+
+Pour chaque organisme, 
+
+- Production(Offre) = Nb Appels Aboutis(Offre)
+
+- ETPP(Offre) = ETPP Accueil Téléphonique x Temps passé(Offre) / Temps passé(Toutes les Offres)
+
+- Productivité(Offre) = Production(Offre) / ETPP(Offre)
+
+
+
+Le calcul du SPC obéit à la loi générale, il est déterminé pour chaque offre. Des productivités individuelles est déduit une moyenne, cette moyenne constitue la référence.
+
+Pour un organisme et une offre, le score des productivités comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+**SPC = Effectif de référence / Effectif** 
+
+ou 
+
+**Productivité / Référence de produtivité**
+
+
+Le  SPC mesure l'écart à la référence de productivité. Un score proche de la valeur  1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence. 
+
+Il se décline également en « enjeu en ETP »  : 
+**Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)**
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité. 
+
+
+
+### ACCUR - ETPP
+
+### ACCUR - REFERENCE 
+
+### ACCUR - SPC

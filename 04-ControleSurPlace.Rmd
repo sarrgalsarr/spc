@@ -1,0 +1,73 @@
+# CONTROLE SUR PLACE
+## LES DONNEES
+
+- Les activités
+Les activités retenues "Contrôle" :
+
+
+- Liste des actions : "110", "112", "113", "114", "116", "122", "401", "120", "121", "140", "142", "150", "200", "201", "204", "210", "230", "240", "250", "143", "144","145", "146"
+
+- Les entités
+Une seule entité concernée : **URSSAF**
+
+
+- Les effectifs
+Les effectifs sont issus de la base Icare. 
+Il s'agit des effectifs présents à la production, pour tous les types de contrats, y compris encadrement (ETPP phase 3 + part d'encadrement phase 5)
+
+- La production et la durée du contrôle : nombre d'actions de contrôle et durée du contrôle par code action, taille du cotisant contrôlé (source Disep-SAS)
+
+Taille : 
+
+
+
+## LE CALCUL DU SPC : PAR TAILLE DU COTISANT CONTROLE ET TYPE D'ACTIONS
+
+La durée de contrôle varie fortement en fonction de la taille du cotisant contrôlé et du type d'action, ainsi, le calcul de la productivité se réalise sur un regroupement taille/type.
+
+Par regroupement Taille/Type d'actions, le volume de production - le nombre d'actions de contrôle - est connu et extrait de la base SAS-Disep.
+
+Par regroupement Taille/Type d'actions, les effectifs ETPP sont estimés à partir des ETPP issus d'Ogur auxquels s'appliquent une clé de répartition.
+
+Cette clé est égale au rapport entre Temps passé sur le regroupement Taille/Type d'actions et le temps passé sur l'ensemble des actions CCA. Ces données sont extraites de la base SAS-Disep.
+
+Pour chaque organisme, 
+
+- Production(Taille/Type d'actions) = Nb d'Actions Aboutis(Taille/Type d'actions)
+
+- ETPP(Taille/Type d'actions) = ETPP CCA x Temps passé(Taille/Type d'actions) / Temps passé(Actions CCA)
+
+- Productivité(Taille/Type d'actions) = Production(Taille/Type d'actions) / ETPP(Taille/Type d'actions)
+
+
+
+Le calcul du SPC obéit à la loi générale, il est déterminé pour chaque regroupement Taille/Type d'actions. Des productivités individuelles est déduite une moyenne, cette moyenne constitue la référence.
+
+Pour un organisme et un regroupement Taille/Type d'actions, le score des productivités comparées se définit comme le rapport entre effectif de référence et l'effectif réel. L'effectif de référence est l'effectif nécessaire pour atteindre la référence de productivité.
+
+Le SPC s'exprime également comme le rapport entre la productivité observée et la productivité de référence.
+
+**SPC = Effectif de référence / Effectif** 
+
+ou 
+
+**Productivité / Référence de produtivité**
+
+
+Le  SPC mesure l'écart à la référence de productivité. Un score proche de la valeur  1 indique un écart à la référence faible, un score supérieur à 1 signifie un niveau de productivité supérieur à la référence. 
+
+Il se décline également en « enjeu en ETP »  : 
+**Enjeu Effectif = Effectif - Effectif de référence = Effectif ( 1- SPC)**
+
+Ainsi, un enjeu largement positif correspond à un SPC faible, càd éloigné de la référence de productivité. 
+
+
+### Actions 110-112-Moins de 3 - ETPP
+
+
+### Actions 110-112-Moins de 3 - REFERENCE
+
+
+### Actions110-112-Moins de 3 - SPC
+
+

@@ -1,0 +1,6 @@
+book_filename: "SPC"
+delete_merged_file: true
+language:
+  ui:
+    
+before_chapter_script: "_common.R"
